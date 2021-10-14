@@ -1,0 +1,45 @@
+input, button, submit { border:none; } 
+
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+
+.calc {
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    width: 212px;
+    padding: 30px 15px 20px 15px;
+    position: relative;
+}
+
+.calc button{
+    transition: all 500ms ease 0s;
+    width: 50px;
+    height: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.calc button:hover {
+    transition: 70ms;
+    background-color: darkgrey;
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 20px #48CAE4;
+}
+
+.times {
+    position: absolute;
+    left:177px;
+    height: 70px !important;
+}
+
+.display {
+    width: 90%;
+    height: 30px;
+    margin: 0px auto 30px auto;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+}
