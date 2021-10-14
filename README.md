@@ -2,11 +2,11 @@
 
 ## Atualize os seus dados:
 
-- Nome:
-- Matrícula:
-- Curso:
-- Semestre/Ano correntes:
-- Link para o seu GitHub:
+- Nome: Cláudio Vitor Dantas
+- Matrícula: 19.1.8987
+- Curso: S.I.
+- Semestre/Ano correntes: Quinto semestre.
+- Link para o seu GitHub: https://github.com/CDInacio
 
 ## [Projeto final:](./Projeto/README.md) 
 
