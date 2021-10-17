@@ -9,7 +9,6 @@
 
   O presente trabalho tem como finalidade a criação de um comércio eletrônico focado no mercado do Mountain Bike. Grande parte das funcionalidades presentes em sites
   de E-commerce ao longo da internet farão parte deste trabalho, levando o usuário do seu cadastro de informações até a escolha e adição de produtos no carrinho de compras, seguido da validação de **algumas** informações referentes a compra.
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
