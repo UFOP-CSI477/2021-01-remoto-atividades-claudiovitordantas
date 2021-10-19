@@ -1,0 +1,25 @@
+body {
+    background-color: #f8f8f8;
+    overflow-x: hidden;
+}
+
+.bg {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.bg img {
+    border-radius: 3px 3px 0 0;
+}
+
+.form {
+    background-color: #fff;
+    padding: 30px 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 4px;
+}
+
+.pos {
+    position: absolute;
+    left: 20%;
+    top: 20%;
+}
