@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function Car(name, brand) {
+        this.name, this.brand;
+      }
+
+      function loadEnteredData() {
+        const name = window.prompt("Nome do carro:");
+        const brand = window.prompt("Marca do carro:");
+
+        const car = new Car(name, brand);
+
+        document.getElementById('name').innerHTML = name;
+        document.getElementById('brand').innerHTML = brand;
+      }
+    </script>
+
+    <style>
+      button {
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+
+  </head>
+  <body>
+    <button
+      style="padding: 10px; background-color: cornflowerblue; color: white"
+      onclick="loadEnteredData()"
+    >
+      Inserir informações via prompt
+    </button>
+    <div id="name"></div>
+    <div id="brand"></div>
+  </body>
+</html>
