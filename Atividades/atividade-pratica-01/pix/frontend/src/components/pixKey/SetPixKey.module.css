@@ -1,0 +1,16 @@
+.icon {
+    color: #fff;
+    font-style: italic;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+  }
+
+.message {
+    width: 30%;
+    position: absolute;
+    left: 35%;
+    top: 3%;
+    text-align: center;
+    z-index: 2;
+}

@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  left: 30%;
+  top: 50px;
+  border-radius: 5px;
+  padding: 40px 30px;
+  width: 40vw;
+  height: 80vh;
+}
+
+.wrapper h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.options {
+  text-align: center;
+}
+.options p {
+  border: 1px solid #fff;
+  border-radius: 3px;
+  color: #fff;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.options p:hover {
+    transform: translateY(-7px);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
