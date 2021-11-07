@@ -57,7 +57,7 @@ export const conversionResult = (from, to, value) => {
   return result.toFixed(4);
 };
 
-//VARRE AS COTAÇÕES E PAGA SÓ OS VALORES
+//PEGA A ULTIMA COTAÇÃO
 export const getLastQuotationValue = (cotation) => {
   let formatedCotation = [];
   for (let key in cotation) {
