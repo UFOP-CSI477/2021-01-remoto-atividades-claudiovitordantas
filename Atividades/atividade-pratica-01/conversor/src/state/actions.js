@@ -1,4 +1,10 @@
-import { setCurrOne, setCurrTwo, setCurrencies, setCurrencyTwoQuotation, setCurrencyOneQuotation } from "./currency-slice";
+import {
+  setCurrOne,
+  setCurrTwo,
+  setCurrencies,
+  setCurrencyTwoQuotation,
+  setCurrencyOneQuotation,
+} from "./currency-slice";
 
 // PEFGAS AS MOEDAS E SIGLAS
 export const fetchCurrencies = () => {
@@ -49,7 +55,7 @@ export const fetchCurrencyTwoQuotation = (value, date) => {
 export const conversionResult = (from, to, value) => {
   let result = (value * from) / to;
   return result.toFixed(4);
-}
+};
 
 //VARRE AS COTAÇÕES E PAGA SÓ OS VALORES
 export const getLastQuotationValue = (cotation) => {
