@@ -1,0 +1,15 @@
+{
+    "name": "claudiovitordantas/estados",
+    "autoload": {
+        "psr-4": {
+            "Claudiovitordantas\\Estados\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Cláudio Vitor Dantas",
+            "email": "65822856+CDInacio@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
