@@ -19,6 +19,13 @@
             <a class="nav-link" href="{{route('produtos.index')}}">Produtos</a>
         </li>
     </ul>
+
+    @if(session('mensagem'))
+    <div class="alert alert-success">
+        {{session('mensagem')}}
+    </div>
+    @endif
+
     @yield('conteudo')
 
 </body>

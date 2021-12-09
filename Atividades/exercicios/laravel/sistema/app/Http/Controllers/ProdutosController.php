@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Produtos;
+use App\Models\Produto;
 use Illuminate\Http\Request;
 
 class ProdutosController extends Controller
@@ -14,8 +14,8 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        $produtos = Produtos::orderBy('nome')->get();
-        return view('produtos.index', ['produtos' => $produtos]);
+        $produto = Produto::orderBy('nome')->get();
+        return view('produtos.index', ['produtos' => $produto]);
     }
 
     /**
@@ -23,9 +23,9 @@ class ProdutosController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create()  //method="post" action="store"
     {
-        //
+        return view('produtos.create');
     }
 
     /**
@@ -36,7 +36,14 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request);
+        // $produto = new Produtos;
+        // $produto->nome = $request->Nome;
+        // $produto->um = $request->um;
+        // $produto->save();
+        Produto::create($request->all());
+        session()->flash('mensagem', 'Produto cadastrado com sucesso');
+        return redirect()->route('produtos.index');
     }
 
     /**
@@ -45,9 +52,10 @@ class ProdutosController extends Controller
      * @param  \App\Models\Produtos  $produtos
      * @return \Illuminate\Http\Response
      */
-    public function show(Produtos $produtos)
+    public function show(Produto $produto)  // exibir um elemento em particular
     {
-        //
+        // dd($produtos);
+        return view('produtos.show', ['produto' => $produto]);
     }
 
     /**
@@ -56,9 +64,9 @@ class ProdutosController extends Controller
      * @param  \App\Models\Produtos  $produtos
      * @return \Illuminate\Http\Response
      */
-    public function edit(Produtos $produtos)
+    public function edit(Produto $produto)  // exibir o formulario->action(update)
     {
-        //
+        return view('produtos.edit', ['produto' => $produto]);
     }
 
     /**
@@ -68,9 +76,13 @@ class ProdutosController extends Controller
      * @param  \App\Models\Produtos  $produtos
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Produtos $produtos)
+    public function update(Request $request, Produto $produto)
     {
-        //
+        // dd($request->all());
+        $produto->fill($request->all());
+        $produto->save();
+        session()->flash('mensagem', 'Produto atualizado com sucesso!');
+        return redirect()->route('produtos.index');
     }
 
     /**
@@ -79,8 +91,8 @@ class ProdutosController extends Controller
      * @param  \App\Models\Produtos  $produtos
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Produtos $produtos)
+    public function destroy(Produto $produto)
     {
-        //
+        $produto->delete();
     }
 }
