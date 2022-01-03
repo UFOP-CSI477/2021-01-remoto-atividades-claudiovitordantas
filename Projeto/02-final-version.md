@@ -29,3 +29,4 @@ A principal dificuldade foi fazer o carrinho com uma lógica semelhante ao que v
 ### 6. Referências
 * Stripe: https://stripe.com/docs
 * Redux Toolkit: https://redux-toolkit.js.org/usage/usage-guide
+* E-commerce templates: https://cssauthor.com/e-commerce-website-templates/
