@@ -1,0 +1,26 @@
+[
+  {
+    "nome": "Coronavac",
+    "fabricante": "Sinovac",
+    "pais": "China",
+    "doses": "2"
+  },
+  {
+    "nome": "Pfizer",
+    "fabricante": "BioNTech/Pfizer",
+    "pais": "Alemanha",
+    "doses": "2"
+  },
+  {
+    "nome": "AstraZeneca",
+    "fabricante": "AstraZeneca, Universidade de Oxford",
+    "pais": "Reino Unido",
+    "doses": "2"
+  },
+  {
+    "nome": "Janssen",
+    "fabricante": "Johnson & Johnson",
+    "pais": "Estados Unidos",
+    "doses": "1"
+  }
+]
