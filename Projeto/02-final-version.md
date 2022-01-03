@@ -1,5 +1,5 @@
 # **CSI606-2021-01 - Remoto - Trabalho Final - Resultados**
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Cláudio Vitor Dantas*
 
 --------------
 
@@ -7,23 +7,26 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+O trabalho desenvolvido tem como foco o desenvolvimento de um comércio eletrônico voltado para o mercado de bicicletas, mais especificamente Mountain Bike. O usuário terá como escolher os produtos dos seguintes departamentos: componentes, acessórios, casual, marcas e bicicletas; além das categorias existentes em cada um desses departamentos. Qualquer usuário, autenticado ou não, pode escolher produtos e adiciona-los no carrinho; porèm, apenas aqueles que foram autenticados podem prosseguir com a compra.
 
 ### 1. Funcionalidades implementadas
-<!-- Descrever as funcionalidades que eram previstas e foram implementas. -->
+* Login </br>
+* Cadastro
+* Barra de pesquisa
+* Carrinho de compras
+* Sistema de pagamento Stripe
   
 ### 2. Funcionalidades previstas e não implementadas
-<!-- Descrever as funcionalidades que eram previstas e não foram implementas, apresentando uma breve justificativa do porquê elas não foram incluídas -->
-
+Todas as funcionalidades previstas foram implementadas.
 ### 3. Outras funcionalidades implementadas
-<!-- Descrever as funcionalidades implementas além daquelas que foram previstas, caso se aplique.  -->
-
+O sistema de pagamento mostrou ser uma funcionalidade relativamente simples e rápida de ser implementada, e por achar que não teria tempo de fazer a implementação, eu decidi não incluí-la nas funcionalidades previstas.
 ### 4. Principais desafios e dificuldades
-<!-- Descrever os principais desafios encontrados no desenvolvimento do trabalho, quais foram as dificuldades e como elas foram superadas e resolvidas. -->
+A principal dificuldade foi fazer o carrinho com uma lógica semelhante ao que vemos em sites no dia a dia. Além disso, eu tive **muita** difulcade em achar fotos boas e sem direitos autorais.
 
 ### 5. Instruções para instalação e execução
 <!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
 
 ### 6. Referências
-<!-- Referências podem ser incluídas, caso necessário. Utilize o padrão ABNT. -->
-
+* Stripe: https://stripe.com/docs
+* Redux Toolkit: https://redux-toolkit.js.org/usage/usage-guide
+* E-commerce templates: https://cssauthor.com/e-commerce-website-templates/
