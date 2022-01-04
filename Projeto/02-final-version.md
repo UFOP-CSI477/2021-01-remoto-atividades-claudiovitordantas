@@ -24,7 +24,37 @@ O sistema de pagamento mostrou ser uma funcionalidade relativamente simples e r�
 A principal dificuldade foi fazer o carrinho com uma lógica semelhante ao que vemos em sites no dia a dia. Além disso, eu tive **muita** difulcade em achar fotos boas e sem direitos autorais.
 
 ### 5. Instruções para instalação e execução
-<!-- Descrever o que deve ser feito para instalar (ou baixar) a aplicação, o que precisa ser configurando (parâmetros, banco de dados e afins) e como executá-la. -->
+Para a execução, é preciso ter o nodejs instalado. Além disso, as seguintes strings de conexão são necessárias: </br>
+PORT = 5000</br>
+MONGO_URI = "mongodb+srv://fz3r0:general01@claudiocluster.plrha.mongodb.net/mtbecommerce?retryWrites=true&w=majority"</br>
+JWT_SECRET = dezzNuts</br>
+STRIPE_KEY = sk_test_51K98XDHt0s8JSRoPc7AzfrGCabZ2oRCDFx8L07DeC5OrZTFCpxDvEeFMEjFdHt2wGVCRksAXTMXsXfeAval9wOzx00MUOXctgM
+
+* Instalação utilizando npm</br>
+  backend
+      
+      cd backend
+      npm install
+      npm start
+      
+  frontend
+      
+      cd frontend
+      npm install
+      npm start
+      
+* Instalação utilizando yarn</br>
+  backend
+      
+      cd backend
+      yarn add
+      yarn run start
+      
+  frontend
+      
+      cd frontend
+      yarn add
+      yarn run start
 
 ### 6. Referências
 * Stripe: https://stripe.com/docs
