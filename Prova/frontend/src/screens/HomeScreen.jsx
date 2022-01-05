@@ -26,7 +26,7 @@ const HomeScreen = () => {
             <ListItemIcon>
               <BsSignpost fontSize="small" />
             </ListItemIcon>
-            <ListItemText>Área Geral</ListItemText>
+            <ListItemText><Link to="dados-gerais">Área Geral</Link></ListItemText>
             <Typography variant="body2" color="text.secondary"></Typography>
           </MenuItem>
           <MenuItem>

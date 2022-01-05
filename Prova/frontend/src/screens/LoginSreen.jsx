@@ -1,15 +1,14 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
 
 import { adminRequest } from "../api/api";
 
 import {
   loginRequest,
-  loginRequestError,
   loginRequestSuccess,
 } from "../redux/slices/adminSlice";
 
-import { Button, Paper, TextField, Typography } from "@mui/material";
+import { Alert, Button, Paper, TextField, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
 import "../assets/css/style.css";
@@ -26,10 +25,10 @@ const LoginSreen = () => {
         email,
         senha,
       });
-      if (data) {
-        dispatch(loginRequestSuccess( data ));
+      if (data.status === 400) {
+        return;
       } else {
-        dispatch(loginRequestError(data.message));
+        dispatch(loginRequestSuccess(data));
       }
     } catch (error) {
       console.log(error);

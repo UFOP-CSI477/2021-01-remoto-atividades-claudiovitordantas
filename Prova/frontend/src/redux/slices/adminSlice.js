@@ -22,10 +22,15 @@ const adminSlice = createSlice({
       state.isLogged = false;
       state.message = action.payload.message;
     },
+    logoutRequest: (state) => {
+      state.isLoading = false;
+      state.isLogged = false;
+      state.admin = null
+    }
   },
 });
 
-export const { loginRequest, loginRequestError, loginRequestSuccess } =
+export const { loginRequest, loginRequestError, loginRequestSuccess, logoutRequest } =
   adminSlice.actions;
 
 export default adminSlice.reducer;

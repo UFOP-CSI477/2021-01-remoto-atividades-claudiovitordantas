@@ -107,7 +107,9 @@ module.exports.data = async (req, res) => {
 
     if (people && vaccines && unites)
       return res.json({ people, vaccines, unites });
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 // inclusion of registers
@@ -119,6 +121,42 @@ module.exports.inclusion = async (req, res) => {
       unidadeId: uniteId,
       vacinaId: vaccineId,
       dose,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+module.exports.overallData = async (req, res) => {
+  try {
+    const jansenId = await Vacina.findOne({ nome: "Janssen" }, "_id");
+    const PfizerId = await Vacina.findOne({ nome: "Pfizer" }, "_id");
+    const CoronavacId = await Vacina.findOne({ nome: "Coronavac" }, "_id");
+    const AstraZenecaId = await Vacina.findOne({ nome: "AstraZeneca" }, "_id");
+
+    const appliedDoses = await Registro.count({});
+    const unicDoses = await Registro.find({ dose: "0" }).count();
+    const firstDoses = await Registro.find({ dose: "1" }).count();
+    const secondDoses = await Registro.find({ dose: "2" }).count();
+
+    const appliedJansen = await Registro.find({ vacinaId: jansenId }).count();
+    const appliedPfizer = await Registro.find({ vacinaId: PfizerId }).count();
+    const appliedCoronavac = await Registro.find({
+      vacinaId: CoronavacId,
+    }).count();
+    const appliedAstraZeneca = await Registro.find({
+      vacinaId: AstraZenecaId,
+    }).count();
+
+    return res.json({
+      appliedDoses,
+      unicDoses,
+      firstDoses,
+      secondDoses,
+      appliedJansen,
+      appliedPfizer,
+      appliedCoronavac,
+      appliedAstraZeneca
     });
   } catch (error) {}
 };

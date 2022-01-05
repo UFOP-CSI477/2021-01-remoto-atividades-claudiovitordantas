@@ -10,15 +10,15 @@ import { Link } from "react-router-dom";
 
 const InclusionScreen = () => {
   const [info, setInfo] = useState({ people: [], vaccines: [], unites: [] });
-
   const [person, setPerson] = useState("");
   const [vaccine, setVaccine] = useState("");
   const [unite, setUnite] = useState("");
   const [dose, setDose] = useState(0);
-
+  
   const fetchAll = async () => {
     try {
       const { data } = await adminRequest.get("/getAllData");
+      console.log(data)
       setInfo({
         people: data.people,
         vaccines: data.vaccines,
@@ -37,8 +37,9 @@ const InclusionScreen = () => {
         uniteId: unite,
         dose,
       });
-      console.log(data);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const submitFormHandler = (e) => {
@@ -67,7 +68,7 @@ const InclusionScreen = () => {
           onChange={(e) => setPerson(e.target.value)}
           helperText="Por favor seleciona uma pessoa"
         >
-          {info.people.map((person, i) => (
+          {info.people && info.people.map((person, i) => (
             <MenuItem key={i} value={person._id}>
               {person.nome}
             </MenuItem>
@@ -82,7 +83,7 @@ const InclusionScreen = () => {
           onChange={(e) => setUnite(e.target.value)}
           helperText="Por favor seleciona uma unidade"
         >
-          {info.unites.map((unite, i) => (
+          {info.unites && info.unites.map((unite, i) => (
             <MenuItem key={i} value={unite._id}>
               {unite.nome}
             </MenuItem>
@@ -97,7 +98,7 @@ const InclusionScreen = () => {
           onChange={(e) => setVaccine(e.target.value)}
           helperText="Por favor seleciona uma vacina"
         >
-          {info.vaccines.map((vaccine, i) => (
+          {info.vaccines && info.vaccines.map((vaccine, i) => (
             <MenuItem key={i} value={vaccine._id}>
               {vaccine.nome}
             </MenuItem>

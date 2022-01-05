@@ -17,6 +17,11 @@ body {
   border: 0;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: none;
+}
+
 textarea,
 input {
   outline: none;

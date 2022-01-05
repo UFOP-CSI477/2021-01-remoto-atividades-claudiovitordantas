@@ -1,8 +1,8 @@
-import { Route, Routes, BrowserRouter, Navigate  } from "react-router-dom";
+import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import HomeScreen from "./screens/HomeScreen";
-import LoginSreen from "./screens/LoginSreen";
+import LoginScreen from "./screens/LoginSreen";
 import AdminDashboard from "./screens/AdminDashboard";
 import PeopleScreen from "./screens/PeopleScreen";
 import Registers from "./screens/Registers";
@@ -10,26 +10,50 @@ import InclusionScreen from "./screens/InclusionScreen";
 import RegisterPeople from "./screens/RegisterPeople";
 import UnitsScreen from "./screens/UnitsScreen";
 import VaccinesScreen from "./screens/VaccinesScreen";
+import DataScreen from "./screens/DataScreen";
 
 function App() {
   const admin = useSelector((state) => state.admin);
-  console.log(admin);
+  console.log(admin.isLogged)
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route
-        
           path="/login"
-          element={admin.isLogged ? <Navigate to="/dashboard" /> : <LoginSreen />}
+          element={
+            admin.isLogged ? <Navigate to="/dashboard" /> : <LoginScreen />
+          }
         />
-        <Route path="/dashboard" element={<AdminDashboard />} />
-        <Route path="/pessoas" element={<PeopleScreen />} />
-        <Route path="/pessoas/cadastro" element={<RegisterPeople />} />
-        <Route path="/registros" element={<Registers />} />
-        <Route path="/registros/inclusao" element={<InclusionScreen />} />
-        <Route path="/unidades" element={<UnitsScreen />} />
-        <Route path="/vacinas" element={<VaccinesScreen />} />
+        <Route
+          path="/dashboard"
+          element={admin.isLogged ? <AdminDashboard /> : <LoginScreen />}
+        />
+        <Route
+          path="/pessoas"
+          element={admin.isLogged ? <PeopleScreen /> : <LoginScreen />}
+        />
+        <Route
+          path="/pessoas/cadastro"
+          element={admin.isLogged ? <RegisterPeople /> : <LoginScreen />}
+        />
+        <Route
+          path="/registros"
+          element={admin.isLogged ? <Registers /> : <LoginScreen />}
+        />
+        <Route
+          path="/registros/inclusao"
+          element={admin.isLogged ? <InclusionScreen /> : <LoginScreen />}
+        />
+        <Route
+          path="/unidades"
+          element={admin.isLogged ? <UnitsScreen /> : <LoginScreen />}
+        />
+        <Route
+          path="/vacinas"
+          element={admin.isLogged ? <VaccinesScreen /> : <LoginScreen />}
+        />
+        <Route path="/dados-gerais" element={<DataScreen />} />
       </Routes>
     </BrowserRouter>
   );

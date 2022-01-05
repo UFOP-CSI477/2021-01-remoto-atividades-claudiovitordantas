@@ -26,5 +26,6 @@ router.post("/register", isAuth, adminController.registerPerson);
 router.get("/vaccines", isAuth, adminController.vaccines);
 router.get("/getAllData", isAuth, adminController.data);
 router.post("/inclusion", isAuth, adminController.inclusion);
+router.get("/overallData", adminController.overallData);
 
 module.exports = router;

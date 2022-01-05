@@ -1,11 +1,9 @@
 import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import { adminRequest } from "../api/api";
-
-import Nav from "../components/Nav";
-
-import axios from "axios";
+import { logoutRequest } from "../redux/slices/adminSlice";
 
 import "../assets/css/style.css";
 import {
@@ -27,6 +25,9 @@ import {
 import { FaSyringe } from "react-icons/fa";
 
 const AdminDashboard = () => {
+  const dispatch = useDispatch();
+  const admin = useSelector((state) => state.admin);
+  console.log(admin);
   const generate = async () => {
     try {
       const { data } = await adminRequest.post("/generateRandomData");
@@ -36,6 +37,7 @@ const AdminDashboard = () => {
   };
 
   const logout = () => {
+    dispatch(logoutRequest());
     localStorage.removeItem("persist:root");
   };
 
