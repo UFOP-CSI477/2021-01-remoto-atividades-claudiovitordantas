@@ -14,24 +14,4 @@ const isAuth = async (req, res, next) => {
   }
 };
 
-const isAuthorized = (req, res, next) => {
-  isAuth(req, res, () => {
-    if (req.user.id === req.params.id || req.user.isAdmin) {
-      next();
-    } else {
-      return res.status(403).json("Permição negada!");
-    }
-  });
-};
-
-const isAdmin = (req, res, next) => {
-  isAuth(req, res, () => {
-    if ( req.user.isAdmin) {
-      next();
-    } else {
-      return res.status(403).json("Permição negada!");
-    }
-  });
-};
-
 module.exports = { isAuth, isAuthorized, isAdmin };
